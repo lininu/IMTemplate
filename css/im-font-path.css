@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../../im-fonts/font-awesome/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../../im-fonts/font-awesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../../im-fonts/font-awesome/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../../im-fonts/font-awesome/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../../im-fonts/font-awesome/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../../im-fonts/font-awesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Ionicons";
+  src: url("../../im-fonts/Ionicons/ionicons.eot?v=2.0.0");
+  src: url("../../im-fonts/Ionicons/ionicons.eot?v=2.0.0#iefix") format("embedded-opentype"), url("../../im-fonts/Ionicons/ionicons.ttf?v=2.0.0") format("truetype"), url("../../im-fonts/Ionicons/ionicons.woff?v=2.0.0") format("woff"), url("../../im-fonts/Ionicons/ionicons.svg?v=2.0.0#Ionicons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url("../../im-fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("../../im-fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../../im-fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../../im-fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../../im-fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../../im-fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }

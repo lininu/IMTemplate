@@ -1,0 +1,144 @@
+//susy setting
+$lg-container: 1200px;
+$md-container: 980px;
+$sm-container: 720px;
+$l-breakpoint: 1280px;
+$m-breakpoint: 980px;
+$s-breakpoint: 768px;
+$gutter-width: 20px;
+$column-width: 80px;
+$susy: (
+    columns: 12,
+    gutters: $gutter-width/$column-width,
+    container: $lg-container,
+    gutter-position: inside,
+    math: fulid,
+    global-box-sizing: border-box,
+    debug: (
+        image: hide,
+        color: rgba(#66f, .25),
+        output: background,
+        toggle: top right,
+    ),
+    use-custom: (
+        box-sizing: false,
+        clearfix: true,
+    ),
+);
+    // debug: (
+    //  image: show,hide
+    //  color: rgba(#66f, .25),
+    //  output: overlay,background
+    //  toggle: top right,
+    // ),
+$z-index: layout, arrow, overlay;
+//font-family def. - start -
+@font-face {
+    font-family: MicrosoftJhengHeiFixBold;
+    unicode-range: U+7db0, U+78A7, U+7B75; // ASCII
+    src: local(微軟正黑體);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: MicrosoftJhengHeiFixBold;
+    unicode-range: U+7db0, U+78A7, U+7B75; // ASCII 
+    // src: local(新細明體);
+    src: local(Yu Gothic), local(MS Gothic), local(微軟正黑體);
+    font-weight: bold;
+    font-style: normal;
+}
+// @font-face {
+//     font-family: GeorgiaCust;
+//     unicode-range: U+0030-U+0039; // ASCII
+//     src: local(Georgia);
+//     // font-weight: normal;
+//     // font-style: normal;
+// }
+$font-stack: "Helvetica Neue", Helvetica, Arial, 微軟正黑體, sans-serif;
+$font-awesome: "Helvetica Neue", Helvetica, Arial, FontAwesome, 微軟正黑體, sans-serif;
+$font-bold: "Helvetica Neue", Helvetica, Arial, MicrosoftJhengHeiFixBold, 微軟正黑體, sans-serif;
+$font-title-num: Constantia, $font-bold;
+$font-icon: 微軟正黑體, sans-serif;
+//font-family def. - end -
+
+//font-size def. - start -
+$font-size--xxs: 10px;
+$font-size--xs: 12px;
+$font-size--s: 14px;
+$font-size--m: 16px;
+$font-size--l: 18px;
+$font-size--2l: 22px;
+$font-size--xl: 26px;
+$font-size--xxl: 36px;
+$font-size--xxxl: 42px;
+
+$arr-font-size: (xxs, $font-size--xxs),
+                (xs, $font-size--xs),
+                (s, $font-size--s),
+                (m, $font-size--m),
+                (l, $font-size--l),
+                (2l, $font-size--2l),
+                (xl, $font-size--xl),
+                (xxl, $font-size--xxl),
+                (xxxl, $font-size--xxxl);
+//font-size def. - end -
+
+//color def. - start -
+//color:main
+$color-brand: #8db547;
+$color-gray: #333333;
+$color-main: #e55714;
+$color-complement: #c8a063;
+// 桂冠: #ef702f;
+// 長汎: #8db547;
+
+$colors: (
+    primary: (
+        brand: $color-brand,
+        gray: $color-gray,
+        main: $color-main
+    ),
+    font: (
+        main: #676767,
+        weak: lighten($color-gray, 40),
+        hyper: #7f3e0a,
+        hyper-hover: $color-main,
+        over-dark: white,
+        highlight: #F77500,
+        title: $color-main,
+        price: #1aa1e3,
+        validate-error: #df0000,
+    ),
+    bg: (
+        white: #FFFFFF,
+        main: #F5F5F5,
+        light-gray: #e3e3e3,
+        tour-hover: #fffee9,
+        yellow: #ffeb8e,
+        blue: #98d1ee,
+        content: #fffbf8,
+        pink: #f0d1cf,
+    ),
+    line: (
+        gray: lighten($color-gray, 60),
+        border: $color-complement
+    ),
+    icon: (
+        fb: #3b579d,
+        google: #d73d32,
+    ),
+    tag: (
+        main: #f9ddd1,
+    ),
+);
+//color def. - end -
+
+$fa-font-path: '../im-fonts/font-awesome';
+$ionicons-font-path: '../im-fonts/Ionicons';
+
+$sidebar-tab-width: 64px;
+$profile-img-width: 32px;
+$chat-profile-img-width: 50px;
+$chat-box-single-height: ($font-size-base * $line-height-base) + ($padding-large-vertical * 2) + 2px;
+$chat-box-height: (3 * $font-size-base * $line-height-base) + ($padding-base-vertical * 2) + 2px; // 86px

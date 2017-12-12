@@ -1,0 +1,34 @@
+.navbar-tool {
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		float: none;
+	}
+	i {
+		vertical-align: middle;
+	}
+}
+@media (max-width: $screen-xs-max) {
+	.navbar-tool {
+		.navbar-nav {
+			display: inline-block;
+			vertical-align: middle;
+			line-height: $navbar-height;
+			float: right;
+		}
+	}	
+}
+
+.nav {
+	li > a {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.profile-icon > a {
+		padding-top: 7px;
+		padding-bottom: 7px;
+	}
+	.profile-icon:last-child > a {
+		padding-right: 15px;
+	}
+}

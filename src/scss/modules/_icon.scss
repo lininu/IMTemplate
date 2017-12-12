@@ -1,0 +1,13 @@
+.icon-count {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    z-index: 1;
+    color: white;
+    font-size: 12px;
+    background: $brand-danger;
+    padding: 3px 4px 3px 3px;
+    line-height: 1;
+    font-style: normal;
+    border-radius: 999px;
+}

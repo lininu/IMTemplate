@@ -1,0 +1,110 @@
+@mixin font-size($font-size: null, $font-size-smaller: null) {
+    @if ($font-size) {
+        @each $name, $size in $arr-font-size {
+            @if( $font-size == $name) {
+                font-size: $size;
+                line-height: 175%;
+            }
+        }
+        @if($font-size-smaller) {
+            @each $name, $size in $arr-font-size {
+                @if( $font-size-smaller == $name) {
+                    @include breakpoint(pad) {
+                        font-size: $size;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// retrieve color from $colors map ie. `color(primary, base)`
+@function color($color-name, $color-variant) {
+    // map inception
+    @return map-get(map-get($colors, $color-name), $color-variant);
+}
+
+@mixin breakpoint($point) {
+    @if $point == lg {
+        @media (min-width: $l-breakpoint + 1px){
+            @content;
+        }
+    }
+    @else if $point == md {
+        @media (min-width: $m-breakpoint){
+            @content;
+        }
+    }
+    @else if $point == sm {
+        @media (min-width: $s-breakpoint){
+            @content;
+        }
+    }
+    @else if $point == xs {
+        @media (max-width: $s-breakpoint - 1px){
+            @content;
+        }
+    }
+}
+
+%clearfix {
+    *zoom: 1;
+    &:before, &:after {
+        display: table;
+        line-height: 0;
+        content: "";
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+%btn--default {
+    padding: 5px 20px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: all .3s linear;
+    // &:hover {
+    //     background: lighten(color(primary, gray), 70%);
+    // }
+    // &:active {
+    //     background: lighten(color(primary, gray), 60%);
+    // }
+}
+
+%font--bold {
+    font-family: $font-bold;
+    font-weight: bold;
+}
+
+%list-horizonal {
+    ul {
+        font-size: 0;
+    }
+    li {
+        @include font-size(m);
+        display: inline-block;
+        //float: left \9; //ie8
+        a {
+            display: inline-block;
+        }
+    }
+}
+
+@mixin tag($font-size: null, $border-color: null, $bg-color: null, $color: null) {
+    @if($border-color and $border-color != none) {} @else { $border-color: lighten(color(primary, gray), 60); }
+    @if($bg-color and $bg-color != none) {} @else { $bg-color: transparent; }
+    @if($color and $color != none) {} @else { $color: color(primary, gray); }
+
+    border: 1px solid $border-color;
+    background: $bg-color;
+    color: $color;
+    transition: all .3s ease;
+    @if($font-size) {
+        @each $name, $size in $arr-font-size {
+            @if( $font-size == $name) {
+                font-size: $size;
+            }
+        }
+    }
+}

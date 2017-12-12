@@ -1,0 +1,28 @@
+{
+  "name": "scss",
+  "version": "1.0.0",
+  "description": "none",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Inu Lin",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-css-image-dimensions": "^1.1.4",
+    "gulp-file-include": "^1.1.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglifyjs": "^0.6.2",
+    "gulp.spritesmith": "^6.5.1",
+    "node-font-awesome": "^1.0.2"
+  }
+}

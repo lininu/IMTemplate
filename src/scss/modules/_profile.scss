@@ -1,0 +1,13 @@
+.profile-icon {
+	img {
+		height: $profile-img-width;
+		width: $profile-img-width;
+	}
+    i {
+        background-color: $gray;
+        height: $profile-img-width;
+        width: $profile-img-width;
+        text-align: center;
+        color: $gray-lighter;
+    }
+}

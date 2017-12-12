@@ -1,0 +1,212 @@
+.chat {
+	// display: table;
+	// height: 100%;
+	// width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	&__row {
+		// display: table-row;
+	}
+	&__main, &__comment, &__header {
+    	background-color: $panel-bg;
+		// display: table-cell;
+	}
+
+	// 
+	&__header {
+		height: ($font-size-h3 * 1.5) + $grid-gutter-width;
+		position: relative;
+		z-index: 1;
+		.dropdown-menu {
+			left: auto;
+			right: 0;
+		}
+	}
+	&__main {
+		position: absolute;
+		left: 0;
+		top: ($font-size-h3 * 1.5) + $grid-gutter-width;
+		right: 0;
+		bottom: $chat-box-height + ($grid-gutter-width / 2);
+	}
+	&__comment {
+		position: absolute;
+		bottom: 0;
+		height: $chat-box-height + ($grid-gutter-width / 2);
+	}
+	@media (max-width: $screen-xs-max) {
+		&__main {
+			bottom: $chat-box-single-height;
+		}
+		&__comment {
+			height: $chat-box-single-height;
+		}
+	}
+	// 
+
+	&__main {
+		// padding-right: 0;
+		&-container {
+			height: 100%;
+			overflow-y: auto;
+		}
+	}
+	&__header {
+		font-size: $font-size-h3;
+		line-height: 1.5;
+		padding: ($grid-gutter-width / 2);
+		// vertical-align: middle;
+		border-bottom: 1px solid $gray-lighter;
+		position: relative;
+	}
+	&__tools {
+		position: absolute;
+		line-height: 1;
+		right: ($grid-gutter-width / 2);
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+		@media (max-width: $screen-xs-max) {
+			right: 2.5em;
+		}
+	}
+	&__close {
+		display: none;
+		position: absolute;
+		right: .25em;
+		top: 50%;
+		transform: translateY(-50%);
+		@media (max-width: $screen-xs-max) {
+			display: block;
+		}
+		.btn-link {
+			color: lighten($gray-light, 10);
+			&:active, &:hover {
+				color: $gray;
+			}
+		}
+	}
+	&__comment {
+		textarea {
+			height: $chat-box-height;
+			resize: none;
+			overflow-y: auto;
+			border-color: $gray-lighter;
+			border-width: 1px 1px 1px 0;
+			border-radius: 0;
+			&:focus {
+				box-shadow: none;
+				border-width: 1px 1px 1px 0;
+			}
+		}
+		button {
+			border-radius: 0;
+			height: $chat-box-height;
+		}
+		.input-group {
+			padding-top: $grid-gutter-width * .5;
+		}
+		@media (max-width: $screen-xs-max) {
+			textarea {
+				height: $chat-box-single-height;
+				padding-top: ($padding-large-vertical * 1);
+				padding-bottom: ($padding-large-vertical * 1);
+			}
+			button {
+				height: $chat-box-single-height;
+			}
+			.input-group {
+				padding-top: 0;
+			}
+		}
+	}
+}
+
+.chat-msg {
+	@extend %clearfix;
+	padding: $grid-gutter-width / 2;
+	&--from {
+		.chat-msg__msg {
+			text-align: left;
+			margin-left: $chat-profile-img-width + ($grid-gutter-width / 3);
+			&-inner {
+				background-color: darken(color(bg, main), 3);
+			}
+		}
+		.profile-icon {
+			float: left;
+		}
+		.profile-name {
+			padding-left: $grid-gutter-width / 3;
+			// float: left;
+		}
+	}
+	&--to {
+		.chat-msg__msg {
+			text-align: right;
+			margin-right: ($chat-profile-img-width + ($grid-gutter-width / 3));
+			&-inner {
+				background-color: lighten($brand-info, 32);
+				text-align: left;
+			}
+		}
+		.profile-icon {
+			float: right;
+		}
+		.profile-name {
+			padding-right: $grid-gutter-width / 3;
+			// float: left;
+		}
+		.chat-msg__profile {
+			text-align: right;
+		}
+	}
+	&__profile {
+		width: 100%;
+		position: relative;
+		a:hover {
+			text-decoration: none;
+		}
+		.profile-icon {
+			img, i {
+				height: $chat-profile-img-width;
+				width: $chat-profile-img-width;
+				display: block;
+			}
+			i:before {
+				display: inline-block;
+				vertical-align: middle;
+				line-height: $chat-profile-img-width;
+			}
+		}
+		.profile-name {
+			color: $gray;
+		}
+	}
+	&__msg {
+		// margin-top: $chat-profile-img-width * (1/2);
+		&-inner {
+			padding: 15px 20px;
+			display: inline-block;
+			// border: 1px solid lighten($gray-light, 20);
+			border-radius: 10px;
+			white-space: pre-line;
+		}
+		&-time {
+			font-size: x-small;
+			color: lighten($gray-light, 10);
+			text-align: right;
+		}
+	}
+	&__past {
+		background-color: darken(color(bg, main), 3);
+		padding: 2px 10px;
+		color: $gray-light;
+		border-radius: 10px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}

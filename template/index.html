@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IM</title>
+  <link rel="stylesheet" href="css/bootstrap-cust.css">
+  <link rel="stylesheet" href="css/default.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button> -->
+        <a class="navbar-brand" href="#">IM</a>
+      </div>
+      <div id="navbar" class="navbar-tool"><!-- navbar-collapse collapse -->
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><i class="glyphicon glyphicon-cog" title="設定"></i></a></li>
+          <li class="profile-icon"><a href="#"><img src="./images/profile2.png" class="img-circle" alt="profile"></a></li>
+        </ul>
+        <!-- <form class="navbar-form navbar-right">
+          <input type="text" class="form-control" placeholder="搜尋...">
+        </form> -->
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <aside class="col-xs-12 col-sm-5 col-md-4 sidebar">
+        <div class="tab sidebar__tab navbar-default">
+          <!-- Nav tabs -->
+          <ul class="nav navbar-nav sidebar__tab__nav" role="tablist">
+            <li role="presentation" class="active"><a href="#firends" aria-controls="firends" role="tab" data-toggle="tab"><i class="glyphicon glyphicon-user fa-2x"></i></a></li>
+            <li role="presentation">
+              <a href="#chat" aria-controls="chat" role="tab" data-toggle="tab"><i class="fa fa-commenting fa-2x" aria-hidden="true"></i> <i class="icon-count"> 999+</i></a>
+            </li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content sidebar__tab__content">
+            <div role="tabpanel" class="tab-pane active" id="firends">
+              <div class="side-target">
+                <div class="panel panel-default">
+                  <div class="panel-heading" data-toggle="collapse" href="#targetProfile">Me</div>
+                  <div id="targetProfile" class="collapse in">
+                    <a href="#" class="side-target__box">
+                      <div class="profile-icon">
+                        <img src="./images/profile2.png" class="img-circle" alt="profile">
+                      </div>
+                      <div class="profile-name">
+                        <b>Inu</b>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" data-toggle="collapse" href="#targetGroup">Group (2)</div>
+                  <div id="targetGroup" class="collapse in">
+                    <a href="#" class="side-target__box">
+                      <div class="profile-icon">
+                        <img src="./images/profile1.png" class="img-circle" alt="profile">
+                      </div>
+                      <div class="profile-name">
+                        <b>Eating! (12)</b>
+                      </div>
+                    </a>
+                    <a href="#" class="side-target__box">
+                      <div class="profile-icon">
+                        <img src="./images/profile5.png" class="img-circle" alt="profile">
+                      </div>
+                      <div class="profile-name">
+                        <b>Have Fun Cooking! (12)</b>
+                      </div>
+                    </a>
+                    <a href="#" class="side-target__box">
+                      <div class="profile-icon">
+                        <i class="ion-ios-pricetags fa-2x img-circle"></i>
+                      </div>
+                      <div class="profile-name">
+                        <b>Temp (1)</b>
+                      </div>
+                    </a>
+                    <a href="#" class="side-target__box">
+                      <div class="profile-icon">
+                        <i class="ion-chatbox-working fa-2x img-circle"></i>
+                      </div>
+                      <div class="profile-name">
+                        <b>murmur (1)</b>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" data-toggle="collapse" href="#targetConnect">Contact (2)</div>
+                  <div id="targetConnect" class="collapse in">
+                    <a href="#" class="side-target__box">
+                      <div class="profile-icon">
+                        <img src="./images/profile3.png" class="img-circle" alt="profile">
+                      </div>
+                      <div class="profile-name">
+                        <b>Mary</b>
+                      </div>
+                    </a>
+                    <a href="#" class="side-target__box">
+                      <div class="profile-icon">
+                        <img src="./images/profile4.png" class="img-circle" alt="profile">
+                      </div>
+                      <div class="profile-name">
+                        <b>Kiki</b>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="chat">
+              <div class="side-target">
+                <div class="panel panel-default">
+                  <a href="#" class="side-target__box active">
+                    <div class="profile-icon">
+                      <img src="./images/profile3.png" class="img-circle" alt="profile">
+                    </div>
+                    <div class="profile-name">
+                      <b>Mary</b>
+                      <small class="side-target__msg text--ellipsis">See you.</small>
+                      <div class="side-target__status">
+                        <span class="label label-info">1</span>
+                        <small class="side-target__time">13:25</small>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="side-target__box">
+                    <div class="profile-icon">
+                      <img src="./images/profile1.png" class="img-circle" alt="profile">
+                    </div>
+                    <div class="profile-name">
+                      <b>Eating!!! (12)</b>
+                      <small class="side-target__msg text--ellipsis">0.0?</small>
+                      <div class="side-target__status">
+                        <span class="label label-info">999+</span>
+                        <small class="side-target__time">Yesterday</small>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="side-target__box">
+                    <div class="profile-icon">
+                      <img src="./images/profile4.png" class="img-circle" alt="profile">
+                    </div>
+                    <div class="profile-name">
+                      <b>Kiki</b>
+                      <small class="side-target__msg text--ellipsis">See you later.</small>
+                      <div class="side-target__status">
+                        <small class="side-target__time">9/7</small>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <ul class="nav nav-sidebar">
+          <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Reports</a></li>
+          <li><a href="#">Analytics</a></li>
+          <li><a href="#">Export</a></li>
+        </ul>
+        <ul class="nav nav-sidebar">
+          <li><a href="">Nav item</a></li>
+          <li><a href="">Nav item again</a></li>
+          <li><a href="">One more nav</a></li>
+          <li><a href="">Another nav item</a></li>
+          <li><a href="">More navigation</a></li>
+        </ul>
+        <ul class="nav nav-sidebar">
+          <li><a href="">Nav item again</a></li>
+          <li><a href="">One more nav</a></li>
+          <li><a href="">Another nav item</a></li>
+        </ul> -->
+      </aside>
+      <main class="col-xs-12 col-sm-7 col-sm-offset-5 col-md-8 col-md-offset-4 main">
+        <div class="chat">
+          <div class="chat__row">
+            <div class="chat__header">
+              Mary
+              <div class="chat__tools dropdown">
+                <a id="dLabel" data-toggle="dropdown" title="Chat room tools" aria-haspopup="true" aria-expanded="false" class="ion-navicon-round"></a>
+                <ul aria-labelledby="dLabel" class="dropdown-menu text-center">
+                  <li><a href="javascript: void(0);" >Leave Chat room</a></li>
+                </ul>
+              </div>
+              <div class="chat__close">
+                <button class="btn btn-link btn-sm" onclick="closeChat();"><i class="ion-close-round fa-lg"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="chat__row">
+            <div class="chat__main">
+              <div class="chat__main-container">
+                <div class="chat-msg text-center">
+                  <a href="javascript: void(0);"><small class="chat-msg__past">Show earlier message</small></a>
+                </div>
+                  @@include('_chatfrom.html', {
+                  "msg" : {
+                  "author":"Mary", "content": "Hi, long time no see!", "time": "9/9 12:00"}
+                  })
+                  @@include('_chatto.html', {
+                  "msg" : {"author":"Inu", "content": "hi", "time": "9/9 12:05"}
+                  })
+                  @@include('_chatfrom.html', {
+                  "msg" : {
+                  "author":"Mary", "content": "I have a holiday next Monday, and I'll hold outdoor barbecue. Our Friends Mike, Lisa, Robin and Kiki will join the party. Would you want to join us?", "time": "9/9 12:10"}
+                  })
+                  @@include('_chatto.html', {
+                  "msg" : {"author":"Inu", "content": "Uh......", "time": "9/9 12:05"}
+                  })
+                  @@include('_chatto.html', {
+                  "msg" : {"author":"Inu", "content": "Could you tell me when the party start?", "time": "9/9 12:05"}
+                  })
+                  @@include('_chatfrom.html', {
+                  "msg" : {
+                  "author":"Mary", "content": "It'll be around 6:30p.m.", "time": "9/9 12:00"}
+                  })
+                  @@include('_chatto.html', {
+                  "msg" : {"author":"Inu", "content": "I'm off work at half past six and may arrive later.", "time": "9/9 12:05"}
+                  })
+                  @@include('_chatfrom.html', {
+                  "msg" : {
+                  "author":"Mary", "content": "OK", "time": "9/9 12:00"}
+                  })
+                  @@include('_chatfrom.html', {
+                  "msg" : {
+                  "author":"Mary", "content": "See you next Monday", "time": "9/9 12:00"}
+                  })
+                  @@include('_chatto.html', {
+                  "msg" : {"author":"Inu", "content": "See you.", "time": "9/9 12:05"}
+                  })
+              </div>
+            </div>
+          </div>
+          <div class="chat__row">
+            <div class="chat__comment">
+              <form id="chatForm" action="/" method="get">
+                <div class="input-group">
+                  <textarea id="chat" class="form-control" name="chatMsg" onkeypress="textareaSubmit(event)"></textarea>
+                  <span class="input-group-btn">
+                    <button id="chatSubmit" class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-share-alt"></i></button>
+                  </span>
+                </div><!-- /input-group -->
+              </form>
+            </div>
+          </div>
+          </div>
+      </main>
+    </div>
+  </div>
+</body>
+<script>
+var textareaSubmit = function(e){
+  if(e.which == 13 && !e.shiftKey) {
+    $(e.target).closest("form").submit();
+    e.preventDefault();
+    return false;
+  }
+}
+var closeChat = function(){
+  $('.main').removeClass('active');
+}
+$(function() {
+  $("#chatForm").on('submit', function(){
+    if($(this).find('textarea').val()=='') {
+      return false;
+    }
+  });
+
+  $('.side-target__box').on('click', function(){
+    $('.main').addClass('active');
+  });
+
+  // var prevHref = '';
+  // $(window).on("hashchange",function(event){
+  //   // console.log(event.originalEvent.oldURL)
+  //   if(prevHref == '') {
+  //     prevHref = event.originalEvent.oldURL;
+  //   } else if(prevHref == event.originalEvent.newURL) {
+  //     prevHref = '';
+  //     $('.main').removeClass('active');
+  //   }
+  // });
+});
+</script>
+</html>

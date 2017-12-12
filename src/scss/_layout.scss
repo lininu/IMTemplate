@@ -1,0 +1,209 @@
+body {
+    padding-top: $navbar-height;
+}
+.text--ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+}
+.navbar-header {
+    float: left;
+    line-height: $navbar-height;
+}
+.navbar-nav {
+    margin: 0;
+}
+.navbar-right {
+    margin: 0;
+    margin-right: $grid-gutter-width / -2;
+}
+
+.sidebar, .main {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.sidebar {
+    background-color: lighten($gray-lighter, 2);
+    position: absolute;
+    top: $navbar-height + 1px;
+    bottom: 0;
+    z-index: $zindex-navbar;
+    border-right: 1px solid darken($gray-lighter, 0);
+    display: block;
+
+    &__tab {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        &__nav {
+            height: 100%;
+            width: $sidebar-tab-width;
+            background-color: lighten($gray-light, 40);
+            position: fixed;
+            // margin: 0;
+            font-size: $font-size-base;
+            > li {
+                float: none;
+                > a {
+                    position: relative;
+                }
+            }
+        }
+        &__content {
+            margin-left: $sidebar-tab-width;
+            height: 100%;
+            overflow-y: auto;
+        }
+        .sidebar__tab__nav {
+            > li > a {
+                padding: $grid-gutter-width / 2;
+                color: lighten($gray-light, 20);
+            }
+            > .active > a {
+                color: $gray-dark;
+            }
+        }
+    }
+}
+
+.main {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: $navbar-height + 1px;
+    background-color: $panel-bg;
+    @media (max-width: $screen-xs-max) {
+        top: 0;
+        opacity: 0;
+        transition: opacity .2s ease;
+        &.active {
+            z-index: $zindex-modal;
+            margin-left: 0;
+            opacity: 1;
+        }
+    }
+}
+
+
+.wrap {
+    &--main {
+        margin: 20px 0 40px;
+        padding: 20px 0 0;
+    }
+    &--medium {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 960px;
+    }
+    &--small {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 600px;
+    }
+    &--idx {
+        padding: 60px 0;
+    }
+    &-pad {
+        &--m {
+            padding: 10px;
+        }
+        &--l {
+            padding: 20px;
+        }
+        &--xl {
+            padding: 40px;
+        }
+    }
+    &-horizonal {
+        &--m {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        &--l {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        &--xl {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+    &-vercial, &-vertical {
+        &--m {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        &--l {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        &--xl {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    }
+    &-top {
+        &--s {
+            padding-top: 5px;
+        }
+        &--m {
+            padding-top: 10px;
+        }
+        &--l {
+            padding-top: 20px;
+        }
+        &--xl {
+            padding-top: 40px;
+        }
+        &--xxl {
+            padding-top: 80px;
+        }
+    }
+    &-bottom {
+        &--m {
+            padding-bottom: 10px;
+        }
+        &--l {
+            padding-bottom: 20px;
+        }
+        &--xl {
+            padding-bottom: 40px;
+        }
+        &--xxl {
+            padding-bottom: 80px;
+        }
+    }
+    &-left {
+        &--m {
+            padding-left: 10px;
+        }
+        &--l {
+            padding-left: 20px;
+        }
+        &--xl {
+            padding-left: 40px;
+        }
+        &--xxl {
+            padding-left: 80px;
+        }
+    }
+    &-right {
+        &--m {
+            padding-right: 10px;
+        }
+        &--l {
+            padding-right: 20px;
+        }
+        &--xl {
+            padding-right: 40px;
+        }
+        &--xxl {
+            padding-right: 80px;
+        }
+    }
+}
