@@ -22,7 +22,7 @@
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^3.0.0",
     "gulp-uglifyjs": "^0.6.2",
-    "gulp.spritesmith": "^6.5.1",
+    "gulp.spritesmith": "^6.13.0",
     "node-font-awesome": "^1.0.2"
   }
 }
